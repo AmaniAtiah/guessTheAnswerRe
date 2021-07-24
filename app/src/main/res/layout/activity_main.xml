@@ -72,7 +72,7 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/rectangle_rounded_corners"
         android:gravity="center"
-        android:text="TextView"
+        android:text="لعبة خمن"
         android:textColor="@color/purple"
         android:textSize="24sp"
         android:textStyle="bold"
