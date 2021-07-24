@@ -3,6 +3,7 @@ package com.barmej.guesstheanswerre;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -55,8 +56,8 @@ public class QuestionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref",MODE_PRIVATE);
-        String appLang = sharedPreferences.getString("app_lang", "");
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_PREF,MODE_PRIVATE);
+        String appLang = sharedPreferences.getString(Constants.APP_LANG, "");
         if (!appLang.equals("")) {
             LocaleHelper.setLocale(this, appLang);
         }
